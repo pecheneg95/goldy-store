@@ -1,0 +1,171 @@
+// TYPOGRAPHY ========================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+$fontFamili: 'Inter', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+$fontLogo1: 'Prata', serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+$fontLogo2: 'Roboto Condensed', sans-serif;
+
+
+
+@mixin Tbody {
+
+    font: {
+        family: $fontFamili;
+        size: 14px;
+        weight: 400;
+    }
+
+    line-height: 14px;
+    color: #303030;
+
+    @media (max-width: 1300px) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+      
+      @media (max-width: 990px) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+      
+      @media (max-width: 660px) {
+        font-size: 10px;
+        line-height: 10px;
+      }
+}
+
+@mixin Tbtn {
+    font: {
+        family: $fontFamili;
+        size: 14px;
+        weight: 500;
+    }
+
+    line-height: 100%;
+    @media (max-width: 1300px) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+      
+      @media (max-width: 990px) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+      
+      @media (max-width: 660px) {
+        font-size: 10px;
+        line-height: 10px;
+      }
+}
+
+@mixin Trbtn {
+    font: {
+        family: $fontFamili;
+        size: 14px;
+        weight: 400;
+    }
+
+    line-height: 100%;
+    
+    @media (max-width: 1299.9px) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+      
+      @media (max-width: 989.5px) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+      
+      @media (max-width: 659.5px) {
+        font-size: 10px;
+        line-height: 10px;
+      }
+}
+
+.paragraph {
+    margin: 0;
+    @include Tbody();
+}
+
+// TYPOGRAPHY ========================================================================================
+
+// BUTTON  ========================================================================================
+@mixin Btn ($color) {
+    box-sizing: border-box;
+    cursor: pointer;
+    @include Tbtn();
+    text-transform: uppercase;
+    color: #ffffff;
+    background: $color;
+    border: none;
+}
+
+@mixin RoundedBtn ($bgcolor, $border-radius) {
+    cursor: pointer;
+    @include Trbtn();
+    color: #303030;
+    padding: 0 30px;
+
+    height: 40px;
+    background: $bgcolor;
+    border-radius: $border-radius;
+    border: none;
+}
+
+.btn1 {
+    @include Btn(#303030)
+}
+
+.btn1:hover {
+    background: #505050;
+}
+
+.btn1:active {
+    background: #000000;
+}
+
+.btn2 {
+    @include Btn(#ffffff);
+    color: #303030;
+    border: 1px solid #303030;
+}
+
+.btn2:hover {
+    background: #303030;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn2:active {
+    background: #000000;
+    color: #FFFFFF;
+    border: none;
+}
+
+.rbtn {
+    @include RoundedBtn(#F0F0F0, 21px)
+}
+
+.rbtn:hover {
+    background: #DDDDDD;
+}
+
+.rbtn:active {
+    background: #303030;
+    color: #FFFFFF;
+}
+
+.rbtn-active,
+.rbtn-active:hover {
+    @include RoundedBtn(#303030, 21px);
+    color: #FFFFFF;
+}
+
+// BUTTON  ========================================================================================
+a {
+    text-decoration: none;
+}

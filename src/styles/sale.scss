@@ -1,0 +1,566 @@
+  section.sale {
+    height: 960px;
+
+    .section_header {
+      margin: 40px 0 24px;
+    }
+
+    .sale_button-container {
+      display: flex;
+      gap: 8px;
+    }
+
+    .limited-slider-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 370px;
+      margin-top: 36px;
+
+      .slider_left-arrow,
+      .slider_right-arrow {
+        width: 54px;
+        height: 54px;
+        position: absolute;
+        top: -90px;
+        border-radius: 50%;
+        border: 1px solid #303030;
+        z-index: 10;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+      }
+
+      .slider_left-arrow:hover,
+      .slider_right-arrow:hover {
+        background-color: #F5F5F5;
+      }
+
+      .slider_left-arrow {
+        right: 62px;
+        background-image: url(./assets/icons/arrow_slider_preview-left.svg);
+      }
+
+      .slider_right-arrow {
+        right: 0px;
+        background-image: url(./assets/icons/arrow_slider_preview-right.svg);
+      }
+
+      .slider_left-arrow:active {
+        background-position: 20%;
+      }
+
+      .slider_right-arrow:active {
+        background-position: 80%;
+      }
+
+      .inactive-arrow {
+        cursor: auto;
+        opacity: 0.2;
+      }
+
+      .inactive-arrow:active {
+        background-position: 50%;
+      }
+
+      .slider_visible-card {
+        width: 100%;
+        height: 780px;
+        position: relative;
+        overflow-x: hidden;
+
+        .limited-slider_card-container {
+          display: flex;
+          gap: 20px;
+          position: absolute;
+          left: 0;
+          transition: left 0.5s ease;
+
+          .limited-slider_card {
+            position: relative;
+            width: 310px;
+            height: 370px;
+
+            cursor: pointer;
+
+            .sale_card-container {
+              box-sizing: border-box;
+              position: absolute;
+              width: 310px;
+              height: 370px;
+              padding: 16px 24px 24px 24px;
+
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              border: 1px solid #F0F0F0;
+
+              .mark-container {
+                display: flex;
+                align-self: flex-start;
+                height: 21px;
+                gap: 4px;
+
+                .mark {
+                  width: 50px;
+                  height: 21px;
+                  border-radius: 15px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  font-weight: 500;
+                  font-size: 13px;
+                  color: #ffffff;
+                }
+
+                .sale {
+                  background-color: #5B8A8F;
+                }
+
+                .hit {
+                  background-color: #E1A661;
+                }
+              }
+            }
+
+            .icons-container {
+              position: absolute;
+              right: 20px;
+              top: 16px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              .sale_card_icons {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                cursor: pointer;
+              }
+
+              .favorite>svg>path {
+                fill: #C9C9C9;
+              }
+
+              .favorite:hover>svg>path {
+                fill: #979797;
+              }
+
+
+              .favorite:active>svg>path {
+                fill: #E24B33;
+              }
+
+              .view>svg>path {
+                fill: #C9C9C9;
+              }
+
+              .view:hover>svg>path,
+              .view:active>svg>path {
+                fill: #979797;
+              }
+            }
+
+            .price-container {
+              width: 100%;
+              height: 21px;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+
+              .price {
+                display: flex;
+                margin-bottom: 2px;
+                gap: 8px;
+
+                .price_discount {
+                  font-weight: 600;
+                  font-size: 18px;
+                }
+
+                .price_base {
+                  font-weight: 400;
+                  font-size: 14px;
+
+                  text-decoration-line: line-through;
+                  color: #8F8F8F;
+                }
+              }
+
+              .discount {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 21px;
+                background: #E24B33;
+                border-radius: 15px;
+
+                font-weight: 500;
+                font-size: 13px;
+                color: #ffffff;
+              }
+            }
+
+            .title {
+              margin: 0;
+              margin-top: 16px;
+              height: 44px;
+
+              font-size: 14px;
+              line-height: 160%;
+            }
+
+            .dropdowns-container {
+              width: 100%;
+              margin-top: 24px;
+              display: none;
+              flex-direction: column;
+              gap: 8px;
+            }
+
+            .sale_card-select {
+              background-color: #FFFFFF;
+              ;
+              height: 480px;
+              box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .sale_card-select>.dropdowns-container {
+              display: flex;
+              margin-top: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .sale_baner_container {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      gap: 20px;
+
+      .sale_baner_item {
+        position: relative;
+        height: 290px;
+        width: 420px;
+        overflow: hidden;
+        background-color: #F8F8F8;
+
+        .diamond {
+          position: absolute;
+          top: 25px;
+          left: -146px;
+        }
+
+        .baner_item_description {
+          position: relative;
+          z-index: 10;
+          margin-top: 72px;
+
+          font-weight: 600;
+          line-height: 160%;
+
+          .baner_item_description_title {
+            margin: 0;
+            padding-left: 27px;
+            margin-bottom: 22px;
+            width: 222px;
+            height: 96px;
+
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 160%;
+
+            text-transform: uppercase;
+          }
+
+          .baner_item_description_discount {
+            display: flex;
+            align-items: center;
+            width: 194px;
+            height: 52px;
+
+
+            .before {
+              margin-left: 26px;
+
+              font-size: 24px;
+              line-height: 160%;
+
+              color: #FFFFFF;
+            }
+
+            .discount {
+              margin-left: 13px;
+
+              font-size: 36px;
+              line-height: 160%;
+
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        .baner_item_img {
+          position: absolute;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .baner1 {
+        .baner_item_description_discount {
+          background-color: #43807F;
+        }
+
+        .baner_item_img {
+          background-image: url(./assets/images/baner1.webp);
+          width: 124px;
+          height: 312px;
+          top: -25px;
+          left: 263px;
+        }
+      }
+
+      .baner2 {
+        .baner_item_description_discount {
+          background-color: #E24B33;
+        }
+
+        .baner_item_img {
+          background-image: url(./assets/images/baner2.webp);
+          width: 419px;
+          height: 341px;
+          top: 0px;
+          left: 191px;
+        }
+      }
+
+      .baner3 {
+        .baner_item_description_discount {
+          background-color: #E1A661;
+        }
+
+        .baner_item_img {
+          background-image: url(./assets/images/baner3.webp);
+          width: 397px;
+          height: 266px;
+          top: 41px;
+          left: 200px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1299.9px) {
+    section.sale {
+      height: 900px;
+
+      .section_header {
+        margin: 32px 0 24px;
+      }
+
+      .limited-slider-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 970px;
+
+        .slider_visible-card {
+          height: 780px;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 100;
+        }
+      }
+
+      .sale_baner_container {
+        justify-content: space-around;
+        bottom: 0;
+
+        .sale_baner_item {
+          height: 240px;
+          width: 300px;
+
+          .baner_item_description {
+            margin-top: 40px;
+
+            .baner_item_description_title {
+              padding-left: 10px;
+              margin-bottom: 10px;
+              width: 150px;
+
+              font-size: 16px;
+            }
+
+            .baner_item_description_discount {
+              width: 150px;
+              height: 40px;
+
+              .before {
+                margin-left: 10px;
+                font-size: 20px;
+              }
+
+              .discount {
+                margin-left: 10px;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+
+        .baner1 {
+          .baner_item_img {
+            left: 150px;
+          }
+        }
+
+        .baner2 {
+          .baner_item_img {
+            left: 100px;
+          }
+        }
+
+        .baner3 {
+          .baner_item_img {
+            left: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 989.5px) {
+    section.sale {
+      height: 1300px;
+
+      .section_header {
+        margin: 24px 0 18px;
+      }
+
+      .limited-slider-container {
+        max-width: 640px;
+
+        .slider_visible-card {
+          height: 780px;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .sale_baner_container {
+        flex-direction: column;
+        bottom: 0;
+        gap: 5px;
+
+        .sale_baner_item {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          .baner_item_description{
+            position: relative;
+            left: -15%;
+          }
+          .baner_item_img {
+            left: 50%;
+            top: -30px;
+          }
+        }
+
+      }
+    }
+  }
+
+
+  @media (max-width: 659.5px) {
+    section.sale {
+      height: 1400px;
+
+      .section_header {
+        margin: 20px 0 16px;
+      }
+      .sale_button-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+      }
+
+      .limited-slider-container {
+        max-width: 310px;
+
+        .slider_left-arrow,
+        .slider_right-arrow {
+          width: 30px;
+          height: 30px;
+          top: 150px;
+
+          background-size: 50%;
+        }
+
+        .slider_left-arrow {
+          left: -60px;
+          z-index: 100;
+        }
+
+        .slider_right-arrow {
+          right: -60px;
+          z-index: 100;
+        }
+
+        .slider_visible-card {
+          height: 780px;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .sale_baner_container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        bottom: 0;
+        gap: 5px;
+
+        .sale_baner_item {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          .baner_item_img {
+            left: 10%;
+            top: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    section.sale {
+      .limited-slider-container {
+        .slider_left-arrow {
+          left: 5px;
+          z-index: 1000;
+        }
+
+        .slider_right-arrow {
+          right: 5px;
+          z-index: 1000;
+        }
+      }
+    }
+  }

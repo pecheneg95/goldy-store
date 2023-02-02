@@ -1,0 +1,7 @@
+import "./scripts/dropdown"
+import "./scripts/infinite-slider"
+import "./scripts/limited-slider"
+import "./scripts/sale"
+import "./scripts/sale_card_img-slider"
+import "./scripts/time"
+import "./scripts/daily"

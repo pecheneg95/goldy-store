@@ -1,0 +1,136 @@
+.popular {
+  .popular_list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    .popular_list_item {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .popular_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      max-width: 200px;
+      height: 259px;
+      background-color: #F8F8F8;
+
+      cursor: pointer;
+
+      .popular_card_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 164px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .popular_card_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 66px;
+        width: 100%;
+        margin: 0;
+
+        font-size: 16px;
+      }
+
+      .rings {
+        background-image: url(./assets/images/popular_rings.webp);
+      }
+
+      .earrings {
+        background-image: url(./assets/images/popular_earrings.webp);
+      }
+
+      .engagement-rings {
+        background-image: url(./assets/images/popular_engagement-rings.webp);
+      }
+
+      .bracelets {
+        background-image: url(./assets/images/popular_bracelets.webp);
+      }
+
+      .necklaces-and-pendants {
+        background-image: url(./assets/images/popular_necklaces.webp);
+      }
+
+      .clock {
+        background-image: url(./assets/images/popular_clock.webp);
+      }
+    }
+
+    .popular_card:hover {
+      border: 1px solid #F0F0F0;
+      box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@media (max-width: 1299.9px) {
+  .popular {
+    .popular_list {
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      justify-items: center;
+    }
+
+  }
+}
+
+@media (max-width: 989.5px) {
+  .popular {
+    .popular_list {
+      .popular_card {
+        .popular_card_title {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 659.5px) {
+  .popular {
+    .popular_list {
+      padding-left: 5px;
+      padding-right: 5px;
+      grid-template-columns: 45% 45%;
+      gap: 10px;
+
+      .popular_card {
+        max-height: 200px;
+        max-width: 150px;
+
+        .popular_card_title {
+          height: 36px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .popular {
+    .popular_list {
+      grid-template-columns: 45% 45%;
+
+      .popular_card {
+        max-height: 180px;
+        max-width: 130px;
+      }
+    }
+  }
+}

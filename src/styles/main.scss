@@ -1,0 +1,49 @@
+@import "./preview.scss";
+@import "./popular.scss";
+@import "./sale.scss";
+@import "./daily.scss";
+@import "./articles.scss";
+
+.section {
+  margin-bottom: 80px;
+}
+
+.section_header {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  margin: 40px 0;
+}
+
+@media (max-width: 1299.9px) {
+  .section {
+    margin-bottom: 60px;
+  }
+  .section_header {
+    font-size: 40px;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 989.5px) {
+  .section {
+    margin-bottom: 40px;
+  }
+  .section_header {
+    font-size: 32px;
+    margin: 32px 0;
+  }
+}
+
+@media (max-width: 659.5px) {
+  .section {
+    margin-bottom: 20px;
+  }
+  .section_header {
+    font-size: 24px;
+    margin: 24px 0;
+  }
+}
+

@@ -1,0 +1,95 @@
+.sale_card {
+  .sale_card_img_slider-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 3px;
+    margin-bottom: 23px;
+    overflow: hidden;
+
+
+    .card_img_slider-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      left: -200px;
+      width: 600px;
+
+      .sale_card_img {
+        width: 200px;
+        height: 200px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .card1_img1,.card1_img2,.card1_img3{
+        background-image: url(./assets/images/sale_1.webp);
+      }
+      .card2_img1,.card2_img2,.card2_img3{
+        background-image: url(./assets/images/sale_2.webp);
+      }
+      .card3_img1,.card3_img2,.card3_img3{
+        background-image: url(./assets/images/sale_3.webp);
+      }
+      .card4_img1,.card4_img2,.card4_img3{
+        background-image: url(./assets/images/sale_4.webp);
+      }
+    }
+
+    .toleft {
+      transition: left 0.5s ease;
+      left: -400px;
+    }
+
+    .toright {
+      transition: left 0.5s ease;
+      left: 0px;
+    }
+
+    .slider_left {
+      position: absolute;
+      left: 0;
+      width: 50px;
+      height: 100%;
+      z-index: 100;
+
+      cursor: pointer;
+    }
+
+    .slider_right {
+      position: absolute;
+      right: 0;
+      width: 50px;
+      height: 100%;
+      z-index: 100;
+
+      cursor: pointer;
+    }
+
+    .slider_buttons-container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 6px;
+      display: flex;
+      gap: 8px;
+
+      .slider-button {
+        width: 8px;
+        height: 8px;
+        background: #FFFFFF;
+
+        border: 1px solid #303030;
+        border-radius: 50%;
+      }
+
+      .slider-button-active {
+        border: none;
+        background: #303030;
+      }
+    }
+  }
+
+
+}

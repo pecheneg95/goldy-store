@@ -1,0 +1,112 @@
+.locate {
+  display: flex;
+  position: relative;
+
+  .locate-icon {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .dropdown {
+    position: relative;
+    width: min-content;
+
+    .dropdown_btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: min-content;
+      text-align: left;
+      background: #ffffff;
+      border: none;
+
+      height: 16px;
+      white-space: nowrap;
+
+      padding: 0 16px 0 24px;
+
+      cursor: pointer;
+    }
+
+    .dropdown_btn.dropdown_btn-active::after {
+      transform: rotate(180deg) translateY(50%);
+    }
+
+    .dropdown_btn::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      background-image: url(./assets/icons/select-arrow.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+
+      pointer-events: none;
+    }
+
+    .dropdown_list {
+      margin: 0;
+      padding: 0;
+
+      display: none;
+
+      position: absolute;
+      top: 16px;
+      z-index: 10;
+
+      width: min-content;
+      padding: 14px 0px 12px;
+      margin-top: 12px;
+
+
+      list-style-type: none;
+      cursor: pointer;
+
+      background: #ffffff;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+
+      .dropdown_list-item {
+        position: relative;
+        margin: 0;
+        padding: 10px 47px 10px 24px;
+
+        width: 100%;
+
+        white-space: nowrap;
+      }
+
+      .dropdown_list-item:hover {
+        background-color: #FAFAFA;
+      }
+      .dropdown_list-item.active::after{
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+  
+        display: block;
+        width: 16px;
+        height: 16px;
+  
+        background-image: url(./assets/icons/marker.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+  
+        pointer-events: none;
+      }
+    }
+
+    .dropdown_list-visible {
+      display: block;
+    }
+  }
+}
